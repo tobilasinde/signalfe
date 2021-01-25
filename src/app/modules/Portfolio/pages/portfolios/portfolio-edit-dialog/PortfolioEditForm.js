@@ -34,6 +34,7 @@ export function PortfolioEditForm({
   const [loading, setLoading] = useState(0);
   const [public_id, setPublic_id] = useState();
   function onPhotoSelected(files) {
+    console.log(process.env)
     const url = `https://api.cloudinary.com/v1_1/${
         process.env.REACT_APP_CLOUD_NAME
         }/upload`;
