@@ -41,7 +41,6 @@ export function PortfolioEditForm({
   
     for (let file of files) {
         const fileName = file.name;
-        console.log(fileName)
         request.post(url)
             .field('upload_preset', process.env.REACT_APP_UPLOAD_PRESET)
             .field('file', file)
