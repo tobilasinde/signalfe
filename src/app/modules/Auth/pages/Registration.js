@@ -99,6 +99,7 @@ function Registration(props) {
       enableLoading();
       register(values.email, values.fullname, values.username, values.password)
         .then(({ data: { token, RefreshToken } }) => {
+          console.log(token)
           props.register(token, RefreshToken);
           disableLoading();
           setSubmitting(false);
